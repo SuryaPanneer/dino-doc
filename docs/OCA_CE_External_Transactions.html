@@ -1,0 +1,16 @@
+#4782
+-----
+This view returns information about external transactions in Oracle Fusion Cash Management. This information is accessible through Cash Management > Bank Statements and through Reconciliation work area > External Cash Transactions > Manage Transactions. A record is returned for each combination of a bank account name, a bank account number, and an external transaction number. 
+
+**Description**
+
+This view provides the following details:
+- Bank account information, such as the account name and account number; bank branch name; and external transaction information, such as the source, status, transaction date, transaction cleared date, transaction value date, and transaction amount.
+
+**Columns**
+- Bank_Account_Multi_Currency_Allowed_Flag: Indicates whether multiple currencies are allowed in the bank account.
+- Bank_Account_Netting_Account_Flag: Indicates if the bank account is a netting account.
+- External_Transaction_Accounting_Flag: Indicates whether to raise accounting events when reconciled.
+
+**Performance**
+For optimal performance, filter the records by the Bank_Account_Number column.
