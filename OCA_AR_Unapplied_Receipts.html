@@ -1,0 +1,25 @@
+This view returns information about unapplied, unidentified, and on-account receipts in Oracle Fusion Receivables. The information returned by the view is similar to the Unapplied Receipts Register report in Fusion Receivables. This information is accessible through Receivables > Accounts Receivable > Receipts > Manage Receipts. A record is returned for each combination of a business unit name, receipt batch name, receipt number, receipt identifier, receipt application status, and receipt application general ledger date.
+
+**Description**
+
+This view provides the following details:
+
+* Receipt batch information, such as the name, date, currency code, status, deposit date, and general ledger date
+* Receipt information, such as the type, number, method name, class name, date, general ledger date, general ledger posted date, reversal date, reversal general ledger date, and reversal general ledger posted date
+* Receipt amount information, such as the receipt amount, on-account amount, and unapplied amounts in the primary and transaction currencies
+* Customer address information, such as the customer address, city, state, country, and primary phone number
+* Customer account information, such as the account name, account number, account established date, account status, account tax code, and account type
+* Remittance bank information, such as the bank name, branch name, bank account name, and account currency code
+
+**Key columns**
+
+* **Receipt_Unapplied_Amount:** Indicates the balance amount due on the receipt.
+* **Age_Of_Receipts_In_Days:** Indicates the receipt age in days
+* **Receipts_Within_10_Days_Flag:** Indicates whether the receipt is created within the past 10 days
+* **Receipt_Postable_Flag:** Indicates whether the receipt can be posted to General Ledger
+* **Receipt_Posted_Flag:** Indicates whether the receipt is posted to General Ledger
+* **Customer_Account_Hold_Bill_Flag:** Indicates whether the paying customer can hold the bill
+
+**Performance**
+
+For optimal performance, filter the records by the Business_Unit_Name and/or Ledger_Name columns.
